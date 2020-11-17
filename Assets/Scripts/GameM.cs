@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameM : MonoBehaviour
 {
     public GameObject gameOverCanvas;
+    public GameObject gameCompleteCanvas;
+    public GameObject scoreui;
     public GameObject showPower1;
     public GameObject showPower2;
     public GameObject showPower3;
@@ -24,6 +26,13 @@ public class GameM : MonoBehaviour
     public void GameOver()
     {
         gameOverCanvas.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void GameComplete()
+    {
+        scoreui.SetActive(false);
+        gameCompleteCanvas.SetActive(true);
         Time.timeScale = 0;
     }
 
@@ -87,8 +96,15 @@ public class GameM : MonoBehaviour
             showPower5.SetActive(false);
             showPower6.SetActive(false);
             showPower7.SetActive(false);
-            showPower8.SetActive(false);
+            
         Time.timeScale = 1;
                
+    }
+
+    public void GameCompleted()
+    {
+        showPower8.SetActive(false);
+        GameComplete();
+
     }
 }

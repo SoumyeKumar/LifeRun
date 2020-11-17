@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
     public float jump = 50f;
     bool onGround = false;
     public Rigidbody2D rb;
-    public GameObject Power1;
     public int score = 0;
     public Text scoreText, highScoreText;
   
@@ -27,35 +26,35 @@ public class PlayerMovement : MonoBehaviour
     {
         score++;
         scoreText.text = "SCORE: " + score.ToString();
-        if (score == 5)
+        if (score == 4)
         {
             gamem.ShowPower1();
         }
-        else if(score == 10)
+        else if(score == 8)
         {
             gamem.ShowPower2();
         }
-        else if (score == 15)
+        else if (score == 12)
         {
             gamem.ShowPower3();
         }
-        else if (score == 20)
+        else if (score == 16)
         {
             gamem.ShowPower4();
         }
-        else if (score == 25)
+        else if (score == 20)
         {
             gamem.ShowPower5();
         }
-        else if (score == 30)
+        else if (score == 24)
         {
             gamem.ShowPower6();
         }
-        else if (score == 35)
+        else if (score == 32)
         {
             gamem.ShowPower7();
         }
-        else if (score == 40)
+        else if (score == 36)
         {
             gamem.ShowPower8();
         }
